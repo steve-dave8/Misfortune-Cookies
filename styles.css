@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    background-color: #e6eeff;
 }
 
 h1 {
@@ -145,5 +146,12 @@ p#fortune {
     to {
         transform: rotate(-90deg) rotateX(75deg) scaleY(140%) translateY(-5rem);
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    p#fortune {
+        left: 0;
+        margin-left: 1rem;
     }
 }

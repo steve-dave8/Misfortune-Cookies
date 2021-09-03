@@ -19,7 +19,7 @@ const misfortunes = [
     "What people call love is just a chemical reaction that compels animals to breed.",
     "Nobody exists on purpose. Nobody belongs anywhere. Everybody's gonna die. Come watch TV.",
     "Get your shit together. Get it all together. And put it in a backpack. All your shit. So it’s together. And if you gotta take it somewhere, take it somewhere, you know, take it to the shit store and sell it… Or put it in a shit museum, I don’t care what you do, you just gotta get it together. Get your shit together!",
-    "If something's hard to do then it's not worth doing.",
+    "If something is hard to do then it's not worth doing.",
     "You tried your best and you failed miserably. The lesson is: never try.",
     "Trying is the first step towards failure.",
     "If you're out of people's sight, you must constantly Twitter them what you're up to.",
@@ -35,9 +35,22 @@ const misfortunes = [
     "Housework can't kill you, but why take a chance?",
     "This too shall pass. It might pass like a kidney stone, but it will pass.",
     "Happiness is like a cake. Have too much and you get sick of it.",
-    "If you are living the dream, how do you know if you are asleep or awake.",
+    "If you are living the dream, how do you know if you are asleep or awake?",
     "People say having kids is life changing, well that doesn't necessarily mean a good thing, does it?",
-    "You won't get anything done by planning."
+    "You won't get anything done by planning.",
+    "Error 404: fortune not found.",
+    "Mirrors don't lie. Fortunately for you they don't laugh.",
+    "Better to remain silent and be thought a fool than to speak out loud and remove all doubt.",
+    "Don't worry about what people think. They don't do it very often.",
+    "If one door closes and another one opens, your house is haunted and you need to run.",
+    "Little things affect little minds.",
+    "The sad truth is so many people are in love and not together, and so many people are together and not in love.",
+    "If age is just a state of mind then you're ageless.",
+    "Due to recent budget cuts we couldn't come up with a better fortune than this one.",
+    "Due to recent budget cuts, the rising cost of electricity, gas, and oil, plus the current state of the economy, the light at the end of the tunnel has been turned off. Have a nice day!",
+    "Error 400: bad request.",
+    "Theory is when you know everything, but nothing works. Practice is when you don't know anything, yet everything works. In programming we combine theory and practice; nothing works, and we don't know why.",
+    "Some people just need a high five. In the face. With a chair."
 ];
 
 const cookie = document.getElementById('cookie');
