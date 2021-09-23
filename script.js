@@ -50,7 +50,11 @@ const misfortunes = [
     "Due to recent budget cuts, the rising cost of electricity, gas, and oil, plus the current state of the economy, the light at the end of the tunnel has been turned off. Have a nice day!",
     "Error 400: bad request.",
     "Theory is when you know everything, but nothing works. Practice is when you don't know anything, yet everything works. In programming we combine theory and practice; nothing works, and we don't know why.",
-    "Some people just need a high five. In the face. With a chair."
+    "Some people just need a high five. In the face. With a chair.",
+    "Don't let your mind wander - it might not come back.",
+    "You are always welcome in any gathering, so let's crash some weddings.",
+    "Luck is coming your way though it may be good or bad.",
+    "The news repeats itself so often they should call it the olds."
 ];
 
 const cookie = document.getElementById('cookie');
@@ -58,10 +62,24 @@ const openCookie = document.getElementById('open-cookie');
 const fortune = document.getElementById('fortune');
 const btnFortune = document.getElementById('btn-fortune');
 
+let deck = misfortunes.slice();
+
+const shuffle = (array) => {
+    let currentIndex = array.length;
+    let randomIndex;
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    };
+    return array;
+};
+
 btnFortune.addEventListener("click", function(){
     if (btnFortune.innerText === "Open Fortune Cookie"){
-        let index = Math.floor(Math.random() * misfortunes.length);
-        let message = misfortunes[index];
+        let index = Math.floor(Math.random() * deck.length);
+        shuffle(deck);
+        let message = deck[index];
         fortune.innerText = message;
         cookie.classList.add("open");
         openCookie.classList.add("reveal");
