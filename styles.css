@@ -1,3 +1,7 @@
+:root {
+    --cookie-img-height: 25rem;
+}
+
 html {
     font-size: 10px;
 }
@@ -23,16 +27,17 @@ footer {
 
 div#container {
     position: relative;
-    height: 25rem;
+    height: var(--cookie-img-height);
 }
 
 img#cookie {
     aspect-ratio: 1;
-    height: 25rem;
+    height: var(--cookie-img-height);
     position: absolute;
-    inset: 0 calc(50vw - 12.5rem);
+    inset: 0 calc(50vw - var(--cookie-img-height)/2);
     z-index: 10;
     border-radius: 50%;
+    transform: rotateY(180deg);
 }
 
 .open {
@@ -40,17 +45,20 @@ img#cookie {
 }
 
 img#open-cookie {
-    height: 25rem;
+    --open-cookie-width: 35rem;
+    height: var(--cookie-img-height);
+    width: var(--open-cookie-width);
     position: absolute;
-    inset: 0 calc(50vw - 15.6rem);
+    inset: 0 calc(50vw - var(--open-cookie-width)/2);
     opacity: 0;
+    transform: rotateY(180deg);
 }
 
 p#fortune {
     font-size: 1.6rem;
     position: absolute;
-    top: 85px;
-    left: 45vw;
+    top: 42%;
+    left: calc(50% - 90px);
     background-color: white;
     padding: 8px 10px;
     min-width: 15rem;
@@ -125,26 +133,24 @@ p#fortune {
 
 @keyframes opening {
     from {
-        transform: none;
-        opacity: 1;
+        transform: rotateY(180deg);
     }
 
     15% {
-        transform: rotate(25deg);
-        opacity: 1;
+        transform: rotateY(180deg) rotate(-25deg);
     }
 
     60% {
-        transform: rotate(-90deg);
+        transform: rotateY(180deg) rotate(90deg);
         opacity: 1;
     }
 
     90% {
-        transform: rotate(-90deg) rotateX(75deg) scaleY(140%) translateY(-5rem);
+        transform: rotateY(180deg) rotate(90deg) rotateX(70deg) scaleY(140%) translateY(-15rem);
     }
 
     to {
-        transform: rotate(-90deg) rotateX(75deg) scaleY(140%) translateY(-5rem);
+        transform: rotateY(180deg) rotate(90deg) rotateX(70deg) scaleY(140%) translateY(-15rem);
         opacity: 0;
     }
 }
